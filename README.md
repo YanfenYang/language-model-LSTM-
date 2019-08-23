@@ -12,7 +12,7 @@ bobsue.prevsent.test.tsv：基于上文的上文语言模型测试数据（PREVS
 bobsue.voc.txt：词汇表文件，每行是一个单词
 lm文件中的每一行都包含一个故事中的句子。prev文件中的每一行都包含一故事中的一个句子，tab，然后是故事中的下一个句子。注意：prevsent文件中每一行的第二个字段与相应的lm文件中的对应行相同。( 也就是说：cut -f 2 bobsue.prevsent.x.tsv与bobsue.lm.x.txt相同）完整的词汇表包含在文件bobsue.voc.txt中，每一行是一个单词。在这个任务中不会出现未知单词。
 
-评估
+评估：
 我们使用单词预测准确率作为主要评估指标而非困惑度(perplexity)。因为当你试图比较某些损失函数时，perplexity不太好用。
 
 你需要评估模型预测除了<s>之外每个单词的能力LMDEV (或LMTEST)。在LMDEV文件中，有
